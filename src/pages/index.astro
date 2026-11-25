@@ -3,96 +3,95 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <head>
-  <title>seafloorsegue</title>
-  <meta name="description" content="A series of deep-sea tubes." />
+	<title>seafloorsegue</title>
+	<meta name="description" content="A series of deep-sea tubes." />
 </head>
 
 <Layout>
-<main>
-  <header class="word-header">
-    <h1>seafloorsegue</h1>
-    <span class="pronunciation">/sē flôr sĕg′wā″/</span>
-  </header>
+	<main>
+		<header class="word-header">
+			<h1>seafloorsegue</h1>
+			<span class="pronunciation">/sē flôr sĕg′wā″/</span>
+		</header>
 
-  <p class="word-class">noun</p>
+		<p class="word-class">noun</p>
 
-  <ol>
-    <li>A series of deep-sea tubes.</li>
-    <li>Website for stuff I wanna host on the internet.</li>
-    <li><a href="/blog">My personal blog.</a></li>
-    <li><a href="/minecraft">My self-hosted Minecraft server.</a></li>
-  </ol>
+		<ol>
+			<li>A series of deep-sea tubes.</li>
+			<li>Website for stuff I wanna host on the internet.</li>
+			<!-- <li><a href="/blog">My personal blog.</a></li> -->
+			<li><a href="https://map.seafloorsegue.net">My self-hosted Minecraft server.</a></li>
+		</ol>
 
-  <!-- <footer>
-    <p>Created by @hexkel</p>
-  </footer> -->
-</main>
+		<!-- <footer>
+			<p>Created by @hexkel</p>
+		</footer> -->
+	</main>
 </Layout>
 
 <style>
-  body {
-    background: #111111;
-    color: #eeeeee;
-    font-family: sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
+	body {
+		background: #111111;
+    	color: #eeeeee;
+    	font-family: sans-serif;
+    	margin: 0;
+    	min-height: 100vh;
+    	display: grid;
+    	place-items: center;
+  	}
 
-  main {
-    max-width: 700px;
-    padding: 2rem;
-  }
+	main {
+    	max-width: 700px;
+    	padding: 2rem;
+  	}
 
-  h1 {
-    font-size: 3rem;
-  }
+	.word-header {
+    	display: flex;
+    	flex-wrap: wrap;
+    	align-items: baseline;
+    	gap: 12px;
+  	}
 
-  span {
-    color: #aaaaaa;
-  }
+	h1 {
+    	font-size: 3rem;
+	}
 
-  p {
-    color: #eeeeee;
-    line-height: 1.7;
-  }
+	.word-header h1 {
+    	margin: 0px;
+	}
 
-  a {
-    color: #eeeeee;
-    text-decoration: none;
-  }
+	span {
+    	color: #aaaaaa;
+  	}
 
-  a:hover {
-    font-weight: bold;
-  }
+	.word-header span {
+		height: 2rem;
+	}
 
-  li::marker {
-    color: #888888;
-  }
+	p {
+		color: #eeeeee; line-height: 1.7;
+	}
 
-  li {
-    padding-left: 1rem;
-    line-height: 2rem;
-  }
+	.word-class{
+		line-height: 0rem;
+		font-weight: bold;
+	}
 
-  .word-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 12px;
-  }
+	li {
+		padding-left: 0.7rem;
+		line-height: 2rem;
+	}
 
-  .word-header h1 {
-    margin: 0px;
-  }
+	li::marker {
+		color: #888888;
+	}
 
-  .word-header span {
-    height: 2rem;
-  }
+	a {
+		color: #eeeeee;
+		text-decoration: none;
+	}
 
-  .word-class{
-    line-height: 0rem;
-    font-weight: bold;
-  }
+	a:hover {
+		font-weight: bold;
+	}
 </style>
