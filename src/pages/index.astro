@@ -1,54 +1,39 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>seafloorsegue</title>
-    <meta name="description" content="A series of deep-sea tubes." />
-  </head>
+---
+import Layout from "../layouts/Layout.astro";
+---
 
-  <body>
-    <main>
-      <header class="word-header">
-        <h1>seafloorsegue</h1>
-        <span class="pronunciation">/sē flôr sĕg′wā″/</span>
-      </header>
+<head>
+  <title>seafloorsegue</title>
+  <meta name="description" content="A series of deep-sea tubes." />
+</head>
 
-      <p class="word-class">
-        noun
-      </p>
+<Layout>
+<main>
+  <header class="word-header">
+    <h1>seafloorsegue</h1>
+    <span class="pronunciation">/sē flôr sĕg′wā″/</span>
+  </header>
 
-      <ol>
-        <li>
-          A series of deep-sea tubes.
-        </li>
+  <p class="word-class">noun</p>
 
-        <li>
-          Website for stuff I wanna host on the internet.
-        </li>
+  <ol>
+    <li>A series of deep-sea tubes.</li>
+    <li>Website for stuff I wanna host on the internet.</li>
+    <li><a href="/blog">My personal blog.</a></li>
+    <li><a href="/minecraft">My self-hosted Minecraft server.</a></li>
+  </ol>
 
-        <li>
-          <a href="/blog">My personal blog.</a>
-        </li>
-
-        <li>
-          <a href="/minecraft">My self-hosted Minecraft server.</a>
-        </li>
-      </ol>
-
-      <!-- <footer>
-        <p>This website is hosted on GitHub Pages.</p>
-      </footer> -->
-
-    </main>
-  </body>
-</html>
+  <!-- <footer>
+    <p>Created by @hexkel</p>
+  </footer> -->
+</main>
+</Layout>
 
 <style>
   body {
     background: #111111;
     color: #eeeeee;
     font-family: sans-serif;
-    font-family: Roboto;
     margin: 0;
     min-height: 100vh;
     display: grid;
@@ -87,22 +72,27 @@
   }
 
   li {
-    padding-left: 0.5rem;
-    line-height: 1.7;
+    padding-left: 1rem;
+    line-height: 2rem;
   }
 
   .word-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     gap: 12px;
   }
 
   .word-header h1 {
-    margin: 0;
+    margin: 0px;
+  }
+
+  .word-header span {
+    height: 2rem;
   }
 
   .word-class{
-    line-height: 1.0;
+    line-height: 0rem;
     font-weight: bold;
   }
 </style>
