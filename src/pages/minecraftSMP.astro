@@ -15,11 +15,15 @@ import Layout from "../layouts/Layout.astro";
 			<span class="pronunciation">/smp.seafloorsegue.net/</span>
 		</header>
 
-        <p class="word-class">noun</p>
+		<a href="https://map.seafloorsegue.net" target="_blank" rel="noopener noreferrer">map.seafloorsegue.net</a>
+
+		<p></p>
+
+        <!-- <p class="word-class">noun</p>
 		<ol>
 			<li>A modded Minecraft: Java Edition 26.3 survival multiplayer server.</li>
 			<li><a href="https://map.seafloorsegue.net" target="_blank" rel="noopener noreferrer">map.seafloorsegue.net</a></li>
-		</ol>
+		</ol> -->
 
 		<p class="word-class">conditions</p>
         <ol>
@@ -35,13 +39,21 @@ import Layout from "../layouts/Layout.astro";
             <li>Click "Add Instance" in the top left.</li>
             <li>Go to "Import from zip" then paste the following into the field:
 				<div class="copy-box">
-  					<code id="server-modpack">https://seafloorsegue.net/download/smp.mrpack</code>
+  					<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP.mrpack</code>
   					<button class="copy-btn" data-copy="server-modpack">Copy</button>
 				</div>
 			</li>
 			<li>You'll get a warning about <i>weatherglass</i>. Tick the box saying you trust me then hit OK.</li>
-            <li>After downloading, launch the instance. The server will appear in Multiplayer.</li>
-            <li>Ask me to be whitelisted before joining. I'll need your Java Edition username.</li>
+            <li>After downloading, right-click the instance and select "Edit".</li>
+			<li>Go to "Settings", then the "Java" tab.</li>
+			<li>Tick the box for "Java Arguments" then paste the following into the field:
+				<div class="copy-box">
+  					<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
+  					<button class="copy-btn" data-copy="java-args">Copy</button>
+				</div>
+			</li>
+			<li>Hit "Close" in the bottom right. You can now launch the instance.</li>
+            <li>Go to Multiplayer to join. Oh and tell me your Java Edition username to be whitelisted.</li>
         </ol>
     </main>
 </Layout>
