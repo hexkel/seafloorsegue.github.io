@@ -29,8 +29,8 @@ import Layout from "../layouts/Layout.astro";
             <li>Click "Add Instance" in the top left.</li>
             <li>Go to "Import from zip" then paste the following into the field:
 				<div class="copy-box">
-  					<code id="server-ip">https://seafloorsegue.net/download/seafloorsegueSMP-modpack.zip</code>
-  				<button class="copy-btn" data-copy="server-ip">Copy</button>
+  					<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP-modpack.zip</code>
+  					<button class="copy-btn" data-copy="server-modpack">Copy</button>
 				</div>
 			</li>
             <li>Launch the instance after the download completes</li>
@@ -150,3 +150,27 @@ import Layout from "../layouts/Layout.astro";
 		background: #777;
 	}
 </style>
+
+<script>
+	document.querySelectorAll<HTMLButtonElement>(".copy-btn").forEach((button) => {
+		button.addEventListener("click", async () => {
+			const targetId = button.dataset.copy;
+			if (!targetId) return;
+
+			const text = document.getElementById(targetId)?.textContent?.trim();
+			if (!text) return;
+
+			try {
+				await navigator.clipboard.writeText(text);
+
+				button.textContent = "Copied!";
+				setTimeout(() => {
+					button.textContent = "Copy";
+				}, 2000);
+			} catch (err) {
+				console.error("Failed to copy text:", err);
+				button.textContent = "Failed";
+			}
+		});
+	});
+</script>
