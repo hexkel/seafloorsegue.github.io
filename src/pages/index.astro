@@ -1,38 +1,44 @@
-<!-- ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
-
-<Layout>
-	<Welcome />
-</Layout> -->
-
-
----
----
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>SeafloorSegue</title>
-    <meta name="description" content="My personal website and engineering projects." />
+    <title>seafloorsegue</title>
+    <meta name="description" content="A series of deep-sea tubes." />
   </head>
 
   <body>
     <main>
-      <h1>SeafloorSegue</h1>
+      <header class="word-header">
+        <h1>seafloorsegue</h1>
+        <span class="pronunciation">/sē flôr sĕg′wā″/</span>
+      </header>
 
-      <p>
-        Welcome to my personal website.
+      <p class="word-class">
+        noun
       </p>
 
-      <p>
-        Engineering, projects, programming, and other things I'm working on.
-      </p>
+      <ol>
+        <li>
+          A series of deep-sea tubes.
+        </li>
+
+        <li>
+          Website for stuff I wanna host on the internet.
+        </li>
+
+        <li>
+          <a href="/blog">My personal blog.</a>
+        </li>
+
+        <li>
+          <a href="/minecraft">My self-hosted Minecraft server.</a>
+        </li>
+      </ol>
+
+      <!-- <footer>
+        <p>This website is hosted on GitHub Pages.</p>
+      </footer> -->
+
     </main>
   </body>
 </html>
@@ -42,6 +48,7 @@ import Layout from '../layouts/Layout.astro';
     background: #111111;
     color: #eeeeee;
     font-family: sans-serif;
+    font-family: Roboto;
     margin: 0;
     min-height: 100vh;
     display: grid;
@@ -57,8 +64,45 @@ import Layout from '../layouts/Layout.astro';
     font-size: 3rem;
   }
 
-  p {
+  span {
     color: #aaaaaa;
+  }
+
+  p {
+    color: #eeeeee;
     line-height: 1.7;
+  }
+
+  a {
+    color: #eeeeee;
+    text-decoration: none;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+
+  li::marker {
+    color: #888888;
+  }
+
+  li {
+    padding-left: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .word-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .word-header h1 {
+    margin: 0;
+  }
+
+  .word-class{
+    line-height: 1.0;
+    font-weight: bold;
   }
 </style>
