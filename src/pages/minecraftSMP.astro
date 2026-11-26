@@ -33,7 +33,7 @@ import Layout from "../layouts/Layout.astro";
             <li>Don't be a dick.</li>
         </ol>
 
-        <p class="word-class">setup instructions</p>
+        <!-- <p class="word-class">setup instructions</p>
         <ol>
             <li><a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Download Prism Launcher.</a></li>
             <li>Open it and sign in to your Microsoft account. <span>(you must own <i>Minecraft: Java Edition)</i></span></li>
@@ -44,18 +44,48 @@ import Layout from "../layouts/Layout.astro";
   					<button class="copy-btn" data-copy="server-modpack">Copy</button>
 				</div>
 			</li>
-			<li>You'll get a warning about <i>weatherglass</i>. Tick the box saying you trust me then hit OK.</li>
+			<li>You'll get a warning about <i>weatherglass</i>. Tick the box for trusting me then hit "OK".</li>
             <li>After downloading, right-click the instance and select "Edit".</li>
 			<li>Go to "Settings", then the "Java" tab.</li>
-			<li>Tick the box for "Java Arguments" then paste the following into the field:
+			<li>Tick the box for "Java Arguments", paste the following into the field, then hit "Close":
 				<div class="copy-box">
   					<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
   					<button class="copy-btn" data-copy="java-args">Copy</button>
 				</div>
 			</li>
-			<li>Hit "Close" in the bottom right. You can now launch the instance.</li>
-            <li>Go to Multiplayer to join. Oh and tell me your Java Edition username to be whitelisted.</li>
+			<li>You did it! You can now launch the instance with the "Launch" button or by double-clicking.</li>
+			<li><span>(I would also right-click the instance and hit "Create Shortcut" for convenience)</span></li>
+            <li>Once open, to Multiplayer to join. Oh and tell me your Java Edition username to be whitelisted.</li>
+        </ol> -->
+
+		<details>
+			<summary class="word-class">setup instructions</summary>
+
+			<ol>
+            <li><a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Download Prism Launcher.</a></li>
+            <li>Open it and sign in to your Microsoft account. <span>(you must own <i>Minecraft: Java Edition)</i></span></li>
+            <li>Click "Add Instance" in the top left.</li>
+            <li>Go to "Import from zip", paste the following into the field, then hit "OK":
+				<div class="copy-box">
+  					<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP.mrpack</code>
+  					<button class="copy-btn" data-copy="server-modpack">Copy</button>
+				</div>
+			</li>
+			<li>You'll get a warning about <i>weatherglass</i>. Tick the box for trusting me then hit "OK".</li>
+            <li>After downloading, right-click the instance and select "Edit".</li>
+			<li>Go to "Settings", then the "Java" tab.</li>
+			<li>Tick the box for "Java Arguments", paste the following into the field, then hit "Close":
+				<div class="copy-box">
+  					<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
+  					<button class="copy-btn" data-copy="java-args">Copy</button>
+				</div>
+			</li>
+			<li><i>You did it!</i> You can now launch the instance with the "Launch" button or by double-clicking.</li>
+			<li><span>(optional: right-click the instance, select "Create Shortcut", and put somewhere convenient)</span></li>
+            <li>Once launched, go to Multiplayer to join. The server should already appear there.</li>
+			<li>Oh and tell me your <i>Minecraft: Java Edition</i> username to be whitelisted.</li>
         </ol>
+		</details>
     </main>
 </Layout>
 
@@ -136,6 +166,11 @@ import Layout from "../layouts/Layout.astro";
   	a:hover {
     	text-decoration: underline;
   	}
+
+	summary:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
 
 	.copy-box {
 		display: flex;
