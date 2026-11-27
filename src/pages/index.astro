@@ -22,10 +22,6 @@ import Layout from "../layouts/Layout.astro";
 			<!-- <li><a href="/blog">My personal blog.</a></li> -->
 			<li><a href="/minecraftSMP">My Minecraft server.</a></li>
 		</ol>
-
-		<!-- <footer>
-			<p>Created by @hexkel</p>
-		</footer> -->
 	</main>
 </Layout>
 
@@ -49,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
     	display: flex;
     	flex-wrap: wrap;
     	align-items: baseline;
-    	gap: 12px;
+    	column-gap: 12px;
   	}
 
 	h1 {
@@ -64,17 +60,19 @@ import Layout from "../layouts/Layout.astro";
     	color: #aaaaaa;
   	}
 
-	.word-header span {
-		height: 2rem;
-	}
-
 	p {
-		color: #eeeeee; line-height: 1.7;
+		color: #eeeeee;
+		line-height: 1.7;
 	}
 
 	.word-class{
-		line-height: 0rem;
 		font-weight: bold;
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	ol {
+		margin: 0;
 	}
 
 	li {
@@ -96,4 +94,8 @@ import Layout from "../layouts/Layout.astro";
   	a:hover {
     	text-decoration: underline;
   	}
+
+	* {
+    	outline: 1px solid red !important;
+	}
 </style>

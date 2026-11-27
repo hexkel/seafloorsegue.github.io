@@ -13,17 +13,17 @@ import Layout from "../layouts/Layout.astro";
         <header class="word-header">
 			<h1>seafloorsegueSMP</h1>
 			<span class="pronunciation">/smp.seafloorsegue.net/</span>
+
+			<a href="https://map.seafloorsegue.net" target="_blank" rel="noopener noreferrer">map.seafloorsegue.net</a>
 		</header>
-
-		<a href="https://map.seafloorsegue.net" target="_blank" rel="noopener noreferrer">map.seafloorsegue.net</a>
-
-		<p></p>
 
         <!-- <p class="word-class">noun</p>
 		<ol>
 			<li>A modded Minecraft: Java Edition 26.3 survival multiplayer server.</li>
 			<li><a href="https://map.seafloorsegue.net" target="_blank" rel="noopener noreferrer">map.seafloorsegue.net</a></li>
 		</ol> -->
+
+		<p class="line-break"> </p>
 
 		<p class="word-class">conditions</p>
         <ol>
@@ -33,89 +33,71 @@ import Layout from "../layouts/Layout.astro";
             <li>Don't be a dick.</li>
         </ol>
 
-        <!-- <p class="word-class">setup instructions</p>
-        <ol>
-            <li><a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Download Prism Launcher.</a></li>
-            <li>Open it and sign in to your Microsoft account. <span>(you must own <i>Minecraft: Java Edition)</i></span></li>
-            <li>Click "Add Instance" in the top left.</li>
-            <li>Go to "Import from zip", paste the following into the field, then hit "OK":
-				<div class="copy-box">
-  					<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP.mrpack</code>
-  					<button class="copy-btn" data-copy="server-modpack">Copy</button>
-				</div>
-			</li>
-			<li>You'll get a warning about <i>weatherglass</i>. Tick the box for trusting me then hit "OK".</li>
-            <li>After downloading, right-click the instance and select "Edit".</li>
-			<li>Go to "Settings", then the "Java" tab.</li>
-			<li>Tick the box for "Java Arguments", paste the following into the field, then hit "Close":
-				<div class="copy-box">
-  					<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
-  					<button class="copy-btn" data-copy="java-args">Copy</button>
-				</div>
-			</li>
-			<li>You did it! You can now launch the instance with the "Launch" button or by double-clicking.</li>
-			<li><span>(I would also right-click the instance and hit "Create Shortcut" for convenience)</span></li>
-            <li>Once open, to Multiplayer to join. Oh and tell me your Java Edition username to be whitelisted.</li>
-        </ol> -->
-
-		<details>
+		<details class="instructions-dropdown">
 			<summary class="word-class">setup instructions</summary>
 
 			<ol>
-            <li><a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Download Prism Launcher.</a></li>
-            <li>Open it and sign in to your Microsoft account. <span>(you must own <i>Minecraft: Java Edition)</i></span></li>
-            <li>Click "Add Instance" in the top left.</li>
-            <li>Go to "Import from zip", paste the following into the field, then hit "OK":
-				<div class="copy-box">
-  					<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP.mrpack</code>
-  					<button class="copy-btn" data-copy="server-modpack">Copy</button>
-				</div>
-			</li>
-			<li>You'll get a warning about <i>weatherglass</i>. Tick the box for trusting me then hit "OK".</li>
-            <li>After downloading, right-click the instance and select "Edit".</li>
-			<li>Go to "Settings", then the "Java" tab.</li>
-			<li>Tick the box for "Java Arguments", paste the following into the field, then hit "Close":
-				<div class="copy-box">
-  					<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
-  					<button class="copy-btn" data-copy="java-args">Copy</button>
-				</div>
-			</li>
-			<li><i>You did it!</i> You can now launch the instance with the "Launch" button or by double-clicking.</li>
-			<li><span>(optional: right-click the instance, select "Create Shortcut", and put somewhere convenient)</span></li>
-            <li>Once launched, go to Multiplayer to join. The server should already appear there.</li>
-			<li>Oh and tell me your <i>Minecraft: Java Edition</i> username to be whitelisted.</li>
-        </ol>
+				<li><a href="https://prismlauncher.org/download/" target="_blank" rel="noopener noreferrer">Download Prism Launcher.</a></li>
+				<li>Open it and sign in to your Microsoft account. <span>(you must own <i>Minecraft: Java Edition)</i></span></li>
+				<li>Click "Add Instance" in the top left.</li>
+				<li>Go to "Import from zip", paste the following into the field, then hit "OK":
+					<div class="copy-box">
+						<code id="server-modpack">https://seafloorsegue.net/download/seafloorsegueSMP.mrpack</code>
+						<button class="copy-btn" data-copy="server-modpack">Copy</button>
+					</div>
+				</li>
+				<li>You'll get a warning about <i>weatherglass</i>. Tick the box for trusting me then hit "OK".</li>
+				<li>After downloading, that's it! Open the game with the "Launch" button or by double-clicking.</li>
+				<li><span>(optional: right-click the instance, select "Create Shortcut", and put somewhere convenient)</span></li>
+				<li>The server will appear in Multiplayer. Tell me your <i>Java Edition</i> username to be whitelisted.</li>
+        	</ol>
 		</details>
+
+		<details class="instructions-dropdown">
+			<summary class="word-class">fix DH warning</summary>
+
+			<ol>
+				<li>In Prism Launcher, right-click the instance and select "Edit".</li>
+				<li>Go to "Settings", then the "Java" tab.</li>
+				<li>Tick the box for "Java Arguments" then paste the following into the field:
+					<div class="copy-box">
+						<code id="java-args">-XX:+UseZGC -XX:+ZGenerational</code>
+						<button class="copy-btn" data-copy="java-args">Copy</button>
+					</div>
+				</li>
+				<li>Select "Close" in the bottom right and you're done!</li>
+        	</ol>
+		</details>
+		
     </main>
 </Layout>
 
 <style>
-  body {
-    background: #111111;
-    color: #eeeeee;
-    font-family: sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-  }
+	body {
+		background: #111111;
+		color: #eeeeee;
+		font-family: sans-serif;
+		margin: 0;
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+	}
 
-  main {
-    max-width: 700px;
-    padding: 2rem;
-  }
+	main {
+		max-width: 700px;
+		padding: 2rem;
+	}
 
-  .button {
-	color: #4c4c4c;
-	font-style: italic;
-	margin-bottom: 1rem;
-  }
+	.button {
+		color: #4c4c4c;
+		font-style: italic;
+	}
 
-  .word-header {
+	.word-header {
     	display: flex;
     	flex-wrap: wrap;
     	align-items: baseline;
-    	gap: 12px;
+    	column-gap: 12px;
   	}
 
 	h1 {
@@ -123,28 +105,26 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	.word-header h1 {
-    	margin: 0px;
+    	margin: 0rem;
 	}
 
 	span {
     	color: #aaaaaa;
   	}
 
-	.word-header span {
-		height: 2rem;
-	}
-
 	p {
-		color: #eeeeee; line-height: 1.7;
-	}
-
-	p + p {
-  		margin-top: 2.4rem;
+		color: #eeeeee;
+		line-height: 1.7;
 	}
 
 	.word-class{
-		line-height: 0rem;
 		font-weight: bold;
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	ol {
+		margin: 0;
 	}
 
 	li {
@@ -203,6 +183,10 @@ import Layout from "../layouts/Layout.astro";
 
 	.copy-btn:active {
 		background: #777;
+	}
+
+	* {
+    	outline: 1px solid red !important;
 	}
 </style>
 
